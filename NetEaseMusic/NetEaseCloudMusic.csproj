@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8619F07A-77C7-4C05-81B7-EBFE83D89ACA}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NetEaseMusic</RootNamespace>
+    <AssemblyName>NetEaseMusic</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>15.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NetDimension.NanUI">
+      <HintPath>..\..\..\..\NetDimension.NanUI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MusicJSObject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="15.ico" />
+    <Content Include="www\image\left_nav\friend.png" />
+    <Content Include="www\image\left_nav\friend_click.png" />
+    <Content Include="www\image\left_nav\friend_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\cloudmusic_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\download_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\firend_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\fm_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\loclmusic_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\music_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\music_list_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\mv_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\myLove_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\mysingger_click.png" />
+    <EmbeddedResource Include="www\image\left_nav\addMusicList.png" />
+    <EmbeddedResource Include="www\image\left_nav\addMusicList_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\closeList.png" />
+    <EmbeddedResource Include="www\image\left_nav\closeList_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\cloudmusic.png" />
+    <EmbeddedResource Include="www\image\left_nav\cloudmusic_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\download.png" />
+    <EmbeddedResource Include="www\image\left_nav\download_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\firend.png" />
+    <EmbeddedResource Include="www\image\left_nav\firend_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\fm.png" />
+    <EmbeddedResource Include="www\image\left_nav\fm_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\loclmusic.png" />
+    <EmbeddedResource Include="www\image\left_nav\loclmusic_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\music.png" />
+    <EmbeddedResource Include="www\image\left_nav\music_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\music_list.png" />
+    <EmbeddedResource Include="www\image\left_nav\music_list_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\mv.png" />
+    <EmbeddedResource Include="www\image\left_nav\mv_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\myLove.png" />
+    <EmbeddedResource Include="www\image\left_nav\myLove_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\mysingger.png" />
+    <EmbeddedResource Include="www\image\left_nav\mysingger_hover.png" />
+    <EmbeddedResource Include="www\image\left_nav\newMessage.png" />
+    <EmbeddedResource Include="www\image\left_nav\playing.png" />
+    <EmbeddedResource Include="www\image\left_nav\showList.png" />
+    <EmbeddedResource Include="www\image\left_nav\showList_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\closeFrm.png" />
+    <EmbeddedResource Include="www\image\borderbar\closeFrm_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\cloth.png" />
+    <EmbeddedResource Include="www\image\borderbar\cloth_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\left.png" />
+    <EmbeddedResource Include="www\image\borderbar\left_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\logo.png" />
+    <EmbeddedResource Include="www\image\borderbar\maxmal.png" />
+    <EmbeddedResource Include="www\image\borderbar\maxmal_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\message.png" />
+    <EmbeddedResource Include="www\image\borderbar\message_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\minimal.png" />
+    <EmbeddedResource Include="www\image\borderbar\minimal_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\right_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\right.png" />
+    <EmbeddedResource Include="www\image\borderbar\search_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\search_none.png" />
+    <EmbeddedResource Include="www\image\borderbar\setting.png" />
+    <EmbeddedResource Include="www\image\borderbar\setting_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\toMix.png" />
+    <EmbeddedResource Include="www\image\borderbar\toMix_hover.png" />
+    <EmbeddedResource Include="www\image\borderbar\triangleDown.png" />
+    <EmbeddedResource Include="www\image\borderbar\triangleDown_hover.png" />
+    <EmbeddedResource Include="www\photos\mine.jpg" />
+    <EmbeddedResource Include="www\image\hg.png" />
+    <EmbeddedResource Include="www\image\logo.png" />
+    <EmbeddedResource Include="www\index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="www\css\" />
+    <Folder Include="www\js\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

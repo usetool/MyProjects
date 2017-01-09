@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7E367AD0-CC0B-486C-B78F-28CA431D73FC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>天天管家</RootNamespace>
+    <AssemblyName>天天管家</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>get261.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>CDB585A314026F0E6ECAECB1F71E727F05EB4054</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>天天班主任_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\SQLite-1.0.66.0-binaries\bin\System.Data.SQLite.DLL</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CalcProgress.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="DbHelperSQLite.cs" />
+    <Compile Include="FrmAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbout.Designer.cs">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddDiary.Designer.cs">
+      <DependentUpon>FrmAddDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAddQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAddQuestion.Designer.cs">
+      <DependentUpon>FrmAddQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDiary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDiary.Designer.cs">
+      <DependentUpon>FrmDiary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFirstInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFirstInfo.Designer.cs">
+      <DependentUpon>FrmFirstInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSentence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSentence.Designer.cs">
+      <DependentUpon>FrmSentence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetPass.Designer.cs">
+      <DependentUpon>FrmSetPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSetRun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSetRun.Designer.cs">
+      <DependentUpon>FrmSetRun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmShowInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmShowInfo.Designer.cs">
+      <DependentUpon>FrmShowInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTallMePass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTallMePass.Designer.cs">
+      <DependentUpon>FrmTallMePass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTestForQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTestForQuestion.Designer.cs">
+      <DependentUpon>FrmTestForQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUpdateWhy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUpdateWhy.Designer.cs">
+      <DependentUpon>FrmUpdateWhy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmYearPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmYearPlan.Designer.cs">
+      <DependentUpon>FrmYearPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonthPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonthPlan.Designer.cs">
+      <DependentUpon>FrmMonthPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWeekPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWeekPlan.Designer.cs">
+      <DependentUpon>FrmWeekPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDayPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDayPlan.Designer.cs">
+      <DependentUpon>FrmDayPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFiveYearPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFiveYearPlan.Designer.cs">
+      <DependentUpon>FrmFiveYearPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmWhy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmWhy.Designer.cs">
+      <DependentUpon>FrmWhy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Operation\DataOperation.cs" />
+    <Compile Include="Entity\Plan.cs" />
+    <Compile Include="FrmLongPlan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLongPlan.Designer.cs">
+      <DependentUpon>FrmLongPlan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbout.resx">
+      <DependentUpon>FrmAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddDiary.resx">
+      <DependentUpon>FrmAddDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAddQuestion.resx">
+      <DependentUpon>FrmAddQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDiary.resx">
+      <DependentUpon>FrmDiary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFirstInfo.resx">
+      <DependentUpon>FrmFirstInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSentence.resx">
+      <DependentUpon>FrmSentence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetPass.resx">
+      <DependentUpon>FrmSetPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSetRun.resx">
+      <DependentUpon>FrmSetRun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmShowInfo.resx">
+      <DependentUpon>FrmShowInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTallMePass.resx">
+      <DependentUpon>FrmTallMePass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTestForQuestion.resx">
+      <DependentUpon>FrmTestForQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUpdateWhy.resx">
+      <DependentUpon>FrmUpdateWhy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmYearPlan.resx">
+      <DependentUpon>FrmYearPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonthPlan.resx">
+      <DependentUpon>FrmMonthPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWeekPlan.resx">
+      <DependentUpon>FrmWeekPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDayPlan.resx">
+      <DependentUpon>FrmDayPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFiveYearPlan.resx">
+      <DependentUpon>FrmFiveYearPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLongPlan.resx">
+      <DependentUpon>FrmLongPlan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmWhy.resx">
+      <DependentUpon>FrmWhy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="get261.ico" />
+    <Content Include="get349.ico" />
+    <Content Include="process.txt" />
+    <None Include="Resources\QQ截图20160207112259.png" />
+    <None Include="Resources\QQ图片20151106194457.gif" />
+    <None Include="Resources\45345435.gif" />
+    <None Include="Resources\343MC_DI.gif" />
+    <None Include="Resources\十字.png" />
+    <None Include="Resources\QQ图片20151123084303.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
